@@ -93,9 +93,9 @@ async def on_shutdown(dps: Dispatcher):
 @dp.throttled(rate=2)
 async def cmd_start(msg: Message):
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="😎 WEB APP", web_app=WebAppInfo(url=f"{ENDPOINT}/web-start"))]
+        [InlineKeyboardButton(text="Запустить", web_app=WebAppInfo(url=f"{ENDPOINT}/web-start"))]
     ])
-    await msg.reply("TEST WEB APP", reply_markup=keyboard)
+    await msg.reply("Запустите лифт в телеграмм", reply_markup=keyboard)
 
 
 def main():
